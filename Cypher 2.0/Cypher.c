@@ -33,6 +33,7 @@ void userInputOption();
 void fileOption(char*, char*);
 void textOption(int, char**);
 void fileOption(char* ,  char* );
+void againOption();
 
 int main(int argc, char **argv) {
 
@@ -124,6 +125,13 @@ void helpOption () {
             "Cypher is a simple encoder of decoder.\n"
             "For conveince of automated tasks, flags along\n"
             "with variables can be used for conveince. \n\n"
+            "./Cypher -h                              : Help menu\n"
+            "./Cypher -f                              : Read and write file.\n"
+            "./Cypher -f  <filename>                  : Read from filename, will ask what file to write to.\n"
+            "./Cypher -f  <filename> <outputfilename> : Reads from file and writes to new file with given name.\n"
+            "./Cypher -t                              : Asks what text to input and output is coded text.\n"
+            "./Cypher -t  <text>                      : Outputs the text or sentence that is in input\n\n."
+
             );
 }
 
@@ -131,7 +139,7 @@ void userMenu () {
     program_title();
     printf ("\n\nMain Menu:"  
             "\n\n(1) Enter code to be translated."
-            "\n\n(2) Read from file and write to file. (Coming Soon)"
+            "\n\n(2) Read from file and write to file."
             "\n\n(3) Help"
             "\n\n(0) Quit. ");
     int option;
@@ -163,7 +171,7 @@ void userInputOption () {
 
 // OPTION FOR TRANSLATING TEXT FROM FILE
 void fileOption(char* inputFileName , char* outputFileName) {
-    printf ("%s, %s", inputFileName, outputFileName);
+    
     if (inputFileName == "none") {
         inputFileName = malloc(50);
         printf("\nEnter the name of the file you want to open! :");
@@ -174,6 +182,7 @@ void fileOption(char* inputFileName , char* outputFileName) {
         printf("\nEnter the name of the file you want to create! :");
         scanf ("%s", outputFileName);
     }
+    printf ("opening %s, writing to %s", inputFileName, outputFileName);
     // Open the input file for reading
     FILE* inputFile = fopen(inputFileName, "r");
     if (inputFile == NULL) {
