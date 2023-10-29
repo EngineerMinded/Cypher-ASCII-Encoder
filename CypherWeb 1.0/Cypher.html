@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cypher Text Conversion: </title>
+</head>
+<body>
+    <h1>Enter text input</h1>
+    <textarea id="editableTextArea" rows="10" cols="50"></textarea>
+
+    <button id="convertButton">Convert</button>
+
+    <h1>Converted Text</h1>
+    <textarea id="nonEditableTextArea" rows="10" cols="50" readonly></textarea>
+
+    <script>
+	    function replacementLetter (character) {
+			const unencrypted =  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			const    encrypted = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA";
+			for (let i = 0; i < 52; i++) {
+				if (character == unencrypted[i]) {
+					return encrypted[i];
+				}
+			}
+			return character;
+		}
+		function encrypt(original) {
+			let answer = "";
+			let found = false;
+			for (let i=0; i < original.length; i++) {
+				answer = answer + replacementLetter(original[i]);
+			}
+			console.log("NEW " + answer);
+			return answer;
+		}
+		
+        // JavaScript function to handle the conversion
+        document.getElementById('convertButton').addEventListener('click', function () {
+            const editableText = document.getElementById('editableTextArea').value;
+            //const nonEditableText = editableText.toUpperCase();
+			const nonEditableText = encrypt(editableText);
+            document.getElementById('nonEditableTextArea').value = nonEditableText;
+        });
+		
+		 
+
+
+    </script>
+</body>
+</html>
