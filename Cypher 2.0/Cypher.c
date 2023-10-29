@@ -82,25 +82,15 @@ void program_title () {
 }
 
 // Function to invert a single character
-char invertCharacter(char c) {
-    char f;
-    if (isalpha(c)) {
-        if (c > 64 && c < 97) {                // char c is uppercase
-            if (c < 78) {                      // char c is 'M' or lower
-                f = (77 + (78 - c));
-            } else {                           // char is 'N' or higher
-                f = (78 - (c - 77));
-            }
-        } else {                               // char c is lowercase
-            if (c < 110) {                     // char c is 'm' or lower
-                f = (109 + (110 - c));
-            } else {                           // char is 'n' or higher
-                f = (110 - (c - 109));
-            }
+char invertCharacter (char c) {
+    char     key[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char encrypt[] = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA";
+    for (int x = 0; x < 52; x++) {
+        if (c == key[x]) {
+            return encrypt[x];
         }
-        return f;                              // return the newly encoded letter
     }
-    return c;                                  // At this point, it is not a letter. Return as is
+    return c;
 }
 
 // Function to invert a string
