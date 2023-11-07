@@ -1,6 +1,6 @@
 // Wayne Mack
 // wamj283@gmail.com
-// (443) 627-117
+// (443) 627-1117
 
 /* encode.c */
 
