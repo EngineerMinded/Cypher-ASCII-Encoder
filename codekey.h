@@ -8,7 +8,6 @@
 
 #define CODE_KEY "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
-// Create struct as code key
 char getNewCharacter(char, int);
 int getValue(char);
 
