@@ -12,3 +12,6 @@ As of version 2, it can accept text input from the command line, and read and
 create files from the command line. 
 
 This program was texted on Linux.
+
+
+VERSION 5.0 is not ready yet
