@@ -1,7 +1,12 @@
+// CYPHER PROGRAM
+// GENERIC LINKEDLIST PROGRAM FOR FUTURE USE
+
+/* linkedlist.c */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "linkedlist.h"
+
 
 // Function to create a new node
 struct Node* createNode(char* data) {

@@ -1,3 +1,6 @@
+// CYPHER PROGRAM
+// Direct execuatable from Console for decoding
+
 /* decode.c */
 
 #include <stdio.h>

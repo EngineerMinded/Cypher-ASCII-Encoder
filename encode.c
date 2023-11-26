@@ -1,3 +1,6 @@
+// CYPHER PROGRAM
+// Executable program for encoding direct from console
+
 /* encode.c */
 
 #include <stdio.h>

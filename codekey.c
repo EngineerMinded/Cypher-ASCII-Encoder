@@ -1,3 +1,7 @@
+// CYPHER PROGRAM
+// Code key file for encoding and decoding for version 5.0 and up
+
+
 /* Codekey.c */
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,7 +26,7 @@ char getNewCharacter (char input, int oneForDecode) {
     if (offset >= 53) {
         offset = 1;
     }
-    printf ("offset: %d\nmake", offset);
+    //printf ("offset: %d\nmake", offset);
     int newValue = value - offset;
     if (oneForDecode == 0) {
         newValue = value + offset;

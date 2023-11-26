@@ -16,6 +16,7 @@
     1.5 Beta with unfinished menu
     2.0 Reads and generate files that are encrypted
     2.5 Reads a key from another file to allow multiple cyphers, included stdlib.h to clean up all warnings
+    5.0 Utilizes an accumulating enigma
 */
 
 // TODO: MAKE SURE THIS IS EXCLUSIVELY A DIRECT FROM MENU PROGRAM (NO MORE AUTOMATED ACCESS). UPDATE HELP MENU
@@ -51,10 +52,7 @@ void program_title () {
     printf("\n\nSimple ASCII encoder and encoder\nWayne Mack.\n\n\n"); 
 }
 
-// Function to invert a single character
-
-
-
+// USER MENU FUNCTION
 
 void userMenu () {
     program_title();
@@ -87,6 +85,7 @@ void userMenu () {
 }
 
 // FOR ALLOWING USER INPUT
+
 void userInputOption (int encodeOrDecode) {
     char input[150];
         printf ("Input code you would like to translate : \n");

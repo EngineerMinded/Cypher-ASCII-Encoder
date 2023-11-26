@@ -1,7 +1,5 @@
-// Wayne Mack
-// wamj283@gmail.com
-// (443) 627-1117
-
+// CYPHER PROGRAM
+// Header File for Codec program
 
 /* codec.h */
 

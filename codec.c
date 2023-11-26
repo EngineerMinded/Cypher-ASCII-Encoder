@@ -1,3 +1,6 @@
+// CYPHER PROGRAM
+// Encoding program central to encoding and decoding
+
 // encode.c
 
 #include <stdio.h>
@@ -10,6 +13,9 @@
 #include "codekey.h"
 
 #define NUMBER_OF_CODES 4
+
+// NEW CODE CHARACTER FUNCTION FOR VERSION 5.0 AND ABOVE IS FUNCTIONAL CALL FOR 
+// GETNEWCHARACTER FUNCTION IN CODEKEY.C
 
 char codeCharacter (char c, int codeKeyNumber, int codeOrDecode) {
     // codeKeyNumber is deprecated
@@ -67,7 +73,7 @@ void textOption (int argc, char **argv , int encodeOrDecode) {
         printf("\n\n");
 }
 
-
+// FUNCTION FOR ENCODING AND DECODING STRINGS IN FILES
 char* codeString(const char* input, int encodeOrDecode) {
     size_t length = strlen(input);
     char* inverted = malloc(length + 1); // Allocate memory for the inverted string
@@ -83,6 +89,7 @@ char* codeString(const char* input, int encodeOrDecode) {
     return inverted;
 }
 
+// DIRECT ACCESS ERROR MESSAGE
 void directAccessErrorMessage(int encodeOrDecode) {
     char *progType = "encode";
     if (encodeOrDecode == 1) {

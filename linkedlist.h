@@ -1,3 +1,7 @@
+// CYPHER PROGRAM
+// GENERIC LINKLIST HEADER FILE
+
+/* linkedlist.h */
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 

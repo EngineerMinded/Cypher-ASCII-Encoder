@@ -1,3 +1,7 @@
+# CYPHER PROGRAM
+# (c) 2023 Wayne A Mack
+
+
 # Make file for Cypher program
 # From this version on out: use one of these and use this  format
 
