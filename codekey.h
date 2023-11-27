@@ -9,7 +9,6 @@
 #define NUMBER_OF_CHARACTERS 90
 #define CODE_KEY "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz!@#$^&*()-_=+[{]}|;:',<>.? "
 
-// Create struct as code key
 char getNewCharacter(char, int);
 int getValue(char);
 
