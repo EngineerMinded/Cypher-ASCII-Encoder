@@ -12,12 +12,15 @@ CFLAGS = -c -Wall
 # all programs to be made and clean the output files
 all: prog encode decode clean 
 
+# main program with user interface
 prog: prog.o codec.o  codekey.o linkedlist.o
 	$(CC) prog.o codec.o codekey.o linkedlist.o -o cypher
 
+# encode console command
 encode: encode.o codec.o codekey.o linkedlist.o
 	$(CC)  encode.o codec.o codekey.o linkedlist.o -o encode
-	
+
+#decode console command
 decode: decode.o codec.o codekey.o linkedlist.o
 	$(CC) decode.o codec.o codekey.o linkedlist.o -o decode
 

@@ -23,7 +23,7 @@ char getNewCharacter (char input, int oneForDecode) {
     } 
     
     offset++;
-    if (offset >= 53) {
+    if (offset >= NUMBER_OF_CHARACTERS) {
         offset = 1;
     }
     //printf ("offset: %d\nmake", offset);
@@ -31,17 +31,17 @@ char getNewCharacter (char input, int oneForDecode) {
     if (oneForDecode == 0) {
         newValue = value + offset;
     } 
-    while (newValue > 53) {
-        newValue = newValue - 53;
+    while (newValue > NUMBER_OF_CHARACTERS) {
+        newValue = newValue - NUMBER_OF_CHARACTERS;
     }
     while (newValue < 0) {
-        newValue = newValue + 53;
+        newValue = newValue + NUMBER_OF_CHARACTERS;
     }
     return CODE_KEY[newValue];
 }
 
 int getValue (char letter) {
-    for (int u = 0; u < 53; u++) {
+    for (int u = 0; u < NUMBER_OF_CHARACTERS; u++) {
         if (letter == CODE_KEY[u]) {
             return u;
         }
