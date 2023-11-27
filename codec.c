@@ -35,7 +35,7 @@ void fileOption(char* inputFileName , char* outputFileName, int encodeOrDecode) 
         printf("\nEnter the name of the file you want to create! :");
         scanf ("%s", outputFileName);
     }
-    printf ("opening %s, writing to %s/n/n", inputFileName, outputFileName);
+    printf ("opening %s, writing to %s\n\n", inputFileName, outputFileName);
     // Open the input file for reading
     FILE* inputFile = fopen(inputFileName, "r");
     if (inputFile == NULL) {
