@@ -1,7 +1,7 @@
 // CYPHER PROGRAM
-// Executable program for encoding direct from console
+// Direct execuatable from Console for decoding
 
-/* encode.c */
+/* decode.c */
 
 #include <stdio.h>
 #include <string.h>
@@ -10,9 +10,10 @@
 #include <stdlib.h>
 #include "codec.h"
 
+
 int main (int argc, char** argv) {
     if (argc < 2) {
-        directAccessErrorMessage(1);
+        directAccessErrorMessage(0);
         return 1;
     }
     int opt;
@@ -21,23 +22,24 @@ int main (int argc, char** argv) {
             switch (opt) {
                 case 'f': /* FILE READ AND CREATION OPTION */
                     if (argc == 3) {
-                        fileOption( argv[2], "none", 0);
+                        fileOption( argv[2], "none", 1);
                     } else if (argc >= 4) {
-                        fileOption (argv[2], argv[3], 0);
+                        fileOption (argv[2], argv[3], 1);
                     } else {
-                        fileOption("none","none", 0);
+                        fileOption("none","none", 1);
                     }
                     break;
                 case 't': /* READ AND TRANSLATE TEXT */
-      	            textOption(argc, argv, 0);
+      	            textOption(argc, argv, 1);
       	            break;
                 case 'h': /* HELP OPTION*/
-                    helpOption(argv[0]);
+                    helpOption();
                     break;
                 default: /* AT THIS POINT THE OPTION IS INVALID */
-                    directAccessErrorMessage(1);
+                    directAccessErrorMessage(0);
                     return 0;
             }
         }
 }
+
 

@@ -33,7 +33,7 @@ int main (int argc, char** argv) {
       	            textOption(argc, argv, 1);
       	            break;
                 case 'h': /* HELP OPTION*/
-                    helpOption();
+                    helpOption(argv[0]);
                     break;
                 default: /* AT THIS POINT THE OPTION IS INVALID */
                     directAccessErrorMessage(0);

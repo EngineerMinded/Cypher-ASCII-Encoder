@@ -101,7 +101,7 @@ void directAccessErrorMessage(int encodeOrDecode) {
     
 }
 
-void helpOption (char *fN) {
+void helpOption () {
     printf ("Welcome to Cypher!\n"
             "---------------------------\n"
             "Cypher is a simple encoder of decoder.\n"
@@ -110,12 +110,12 @@ void helpOption (char *fN) {
             "\n\nencode - encodes text and files"
             "\n\ndecode - decodes text and files "
             "\n\n Use these commands with the flags below."
-            "%s -h                              : Help menu\n"
-            "%s -f                              : Read and write file.\n"
-            "%s -f  <filename>                  : Read from filename, will ask what file to write to.\n"
-            "%s -f  <filename> <outputfilename> : Reads from file and writes to new file with given name.\n"
-            "%s -t                              : Asks what text to input and output is coded text.\n"
-            "%s -t  <text>                      : Outputs the text or sentence that is in input\n\n."
-            ,fN,fN,fN,fN,fN,fN
+            "./prog -h                              : Help menu\n"
+            "./<command> -f                              : Read and write file.\n"
+            "./<command> -f  <filename>                  : Read from filename, will ask what file to write to.\n"
+            "./<command> -f  <filename> <outputfilename> : Reads from file and writes to new file with given name.\n"
+            "./<command> -t                              : Asks what text to input and output is coded text.\n"
+            "./<command> -t  <text>                      : Outputs the text or sentence that is in input\n\n."
+
             );
 }

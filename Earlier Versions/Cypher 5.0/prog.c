@@ -78,7 +78,7 @@ void userMenu () {
         fileOption("none", "none", 1);
 
     }else if (option == 5) {
-        helpOption("(encode or decode)");
+        helpOption();
     } else {
         // nothing  
     }
